@@ -128,14 +128,13 @@ while(1)
 				print 	"--------Menu----------\n"
 					."<select mode:\n"
 					."<1.normal\n"
-					."<2.hard\n"
-					."<3.exit\n"
+					."<2.exit\n"
 					."Enter your choice:";
-					
+					$start_game = $a;
 				ReadMode 'normal';
 				my $choice = ReadKey(0);
 				
-				if($choice eq "3"){
+				if($choice eq "2"){
 					$states = 3;
 				}
 				else{
@@ -163,9 +162,6 @@ while(1)
 		#exit
 		elsif ($states == 3){
 			print "\n---GOODBYE__QAQ--------\n";
-			$end_game = $a;
-			$grade = ($end_game - $start_game)*100;
-			print "your grade is: $grade\n";
 			exit 0;
 		}
 		#game over
