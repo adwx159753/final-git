@@ -9,28 +9,14 @@ use Term::ReadKey;
 our $clear = `clear`;
 our $players_exist = 1;
 
-#game states:
-#0	menu
-#1	gaming
-#2	stop
-#3	exit
-#4	game over 
-
 our $states = 0;
 
-#set the games window w*h = 22*20
-#box[][] = 1 means wall
-#box[][] = 2 means obstacle
-#box[][] = 3 players space
 our @box;
 
 for(my $m = 0; $m < 10; $m += 1)
 {
-	#height
 	for(my $n = 0; $n < 20; $n += 1)
 	{
-		#width
-		#if x != 0 or 19 && #y!= 0 or 21
 		if($n != 0 && $n != 19 && $m != 0 && $m != 9)		
 		{
 			$box[$m][$n] = 0;
