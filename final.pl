@@ -9,14 +9,6 @@ no warnings;
 use Time::HiRes qw/ gettimeofday /;
 use Term::ReadKey;
 
-#&obstacle2() will randomly get
-#obs_2x
-#obs_2y
-#obs_2w
-#obs_2h
-#x,y is the beginning of the obs2
-#w and h are the width and height of the obs2
-
 our $clear = `clear`;
 our $players_exist = 1;
 
